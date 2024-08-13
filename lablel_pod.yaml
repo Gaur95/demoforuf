@@ -1,0 +1,12 @@
+apiVersion: v1 # version of kind or service
+kind: Pod        # name of service or component
+metadata:         # detail about kind(pod)
+  name: akashpod2
+  labels:
+     drink: coffee
+spec:   # specification of pod like container details etc
+  containers:
+  - name: akashcon
+    image: httpd
+    ports:
+      - containerPort: 80
