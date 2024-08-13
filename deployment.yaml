@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akashde
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      drink: colddrink
+  template:
+    metadata:
+      labels:
+        drink: colddrink
+    spec:
+      containers:
+      - name: myappc
+        image: httpd
+        ports:
+        - containerPort: 80
