@@ -48,6 +48,12 @@ vim akashpod.yaml
   148  kubectl apply -f deployment.yaml 
   149  kubectl get pod
   150  history 
-ubuntu@ip-172-31-20-187:~$ 
+ubuntu@ip-172-31-20-187:~$
+0  history 
+  151  kubectl delete rc my-rc
+  152  kubectl delete deploy akashde
+  153  kubectl get pod
+  154  history 
+
 
 ```
