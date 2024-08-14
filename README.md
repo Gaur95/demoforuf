@@ -1,6 +1,6 @@
 # demoforuf  this is only For d1
 this is use only for learn git and github
-# history 13 aug
+### history 13 aug
 ```
 vim akashpod.yaml 
   106  kubectl apply -f akashpod.yaml 
@@ -56,4 +56,65 @@ ubuntu@ip-172-31-20-187:~$
   154  history 
 
 
+```
+### history 14aug
+```
+kubectl get pod
+  156  kubectl get namespaces
+  157  kubectl get pod -A
+  158  kubectl delete pod kube-apiserver-minikube
+  159  kubectl delete pod kube-apiserver-minikube -n kube-system
+  160  kubectl get pod
+  161  kubectl get pod -A
+  162  kubectl delete pod kube-controller-manager-minikube -n kube-system
+  163  kubectl get pod
+  164  kubectl get pod -A
+  165  kubectl get deploy -n kube-system
+  166  kubectl get rc -n kube-system
+  167  kubectl get rs -n kube-system
+  168  kubectl get ds -n kube-system
+  169  docker ps
+  170  docker exec -it minikube bash
+  171  kubectl create ns akash
+  172  kubectl get ns
+  173  ls
+  174  kubectl apply -f akashpod.yaml 
+  175  kubectl apply -f akashpod.yaml  -n akash
+  176  kubectl get pod -A
+  177  kubectl get pod
+  178  kubectl exec -it akashpod -- bash
+  179  kubectl get pod -o wide
+  180  kubectl get pod -o wide -A
+  181  kubectl run akash12 --image httpd --port 80 --dry-run=client -o yaml
+  182  kubectl run akash12 --image httpd --port 80 --dry-run=client -o yaml >akashpod1.yaml
+  183  ls
+  184  cat akashpod
+  185  cat akashpod1.yaml 
+  186  vim akashpod1.yaml 
+  187  cat akashpod1.yaml 
+  188  kubectl run akash12 --image httpd --port 80 --dry-run=client -o json
+  189  kubectl run akash12 --image httpd --port 80 --dry-run=client -n akash -o yaml
+  190  kubectl run akash12 --image httpd --port 80 
+  191  kubectl get pod --namespcases all
+  192  kubectl get pod --namespaces all
+  193  kubectl get pod --namespace all
+  194  kubectl get pod --all-namespace
+  195  kubectl get pod --help
+  196  kubectl get pod -w
+  197  history 
+  198  kubectl get pod -w
+  199  ls
+  200  vim akashpod1.yaml 
+  201  kubectl apply -f akashpod1.yaml 
+  202  kubectl get pod
+  203  vim akashpod1.yaml 
+  204  kubectl apply -f akashpod1.yaml 
+  205  kubectl get pod
+  206  vim akashpod1.yaml 
+  207  kubectl get pod
+  208  kubectl delete pod akash2
+  209  kubectl get service
+  210  kubectl get svc
+  211  kubectl get pod -o wide
+  212  kubectl get svc -A
 ```
