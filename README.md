@@ -132,5 +132,11 @@ vim akashpod1.yaml
   241  kubectl get service
   242  kubectl get svc
   243  kubectl get pod -o wide
+  266  vim podwithsvc.yaml
+  267  kubectl apply -f podwithsvc.yaml 
+  268  minikube ip
+  269  curl 192.168.49.2:30002
+  270  kubectl get svc
+  271  cat podwithsvc.yaml
 ```
 
