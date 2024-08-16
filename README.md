@@ -118,3 +118,19 @@ kubectl get pod
   211  kubectl get pod -o wide
   212  kubectl get svc -A
 ```
+### History 16aug
+```
+vim akashpod1.yaml 
+  233  kubectl apply -f akashpod1.yaml 
+  234  kubectl get pod
+  235  vim akashpod1.yaml 
+  236  kubectl apply -f akashpod1.yaml 
+  237  kubectl get pod
+  238  vim akashpod1.yaml 
+  239  kubectl get pod
+  240  kubectl delete pod akash2
+  241  kubectl get service
+  242  kubectl get svc
+  243  kubectl get pod -o wide
+```
+
