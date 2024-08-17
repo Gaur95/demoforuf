@@ -139,4 +139,40 @@ vim akashpod1.yaml
   270  kubectl get svc
   271  cat podwithsvc.yaml
 ```
+### history 17 aug
+```
+kubectl create secret docker-registry akcred --docker-username aakashgaur57 --docker-password qwe!@#
+```
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: akpod1
+  name: akpod1
+spec:
+  imagePullSecrets:
+    - name: akcred
+  containers:
+  - image: aakashgaur57/akweb
+    name: akpod1
+    ports:
+    - containerPort: 80
+```
+```
+kubectl run akpod --image aakashgaur57/akweb --port 80 --dry-run=client -o yaml
+  112  kubectl run akpod --image aakashgaur57/akweb --port 80 --dry-run=client -o yaml >pod.yaml
+  113  vim pod.yaml 
+  114  kubectl apply -f pod.yaml 
+  115  kubectl get pod
+  116  kubectl get pod -w
+  117  kubectl get pod 
+  118  kubectl get pod -w
+  119  kubectl get pod 
+  120  kubectl delete akpod
+  121  kubectl delete pod akpod
+  122  kubectl get pod 
+  123  kubectl delete pod akpod
+```
+
 
