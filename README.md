@@ -175,4 +175,35 @@ kubectl run akpod --image aakashgaur57/akweb --port 80 --dry-run=client -o yaml
   123  kubectl delete pod akpod
 ```
 
+### 20 aug
+```
+kubectl run pod2 --image httpd --port 80 --dry-run=client -o yaml >podwithpvc.yaml 
+  224  vim podwithpvc.yaml 
+  225  kubectl apply -f podwithpvc.yaml 
+  226  vim podwithpvc.yaml 
+  227  kubectl apply -f podwithpvc.yaml 
+  228  kubectl get pod
+  229  kubectl delete pod pod2
+  230  kubectl apply -f podwithpvc.yaml 
+  231  kubectl get pod
+  232  cat podwithpvc.yaml 
+  233  kubectl exec pod2 -- bash
+  234  kubectl exec -it  pod2 -- bash
+  235  kubectl delete pod pod2
+  236  kubectl apply podwithpvc.yaml 
+  237  kubectl apply -f podwithpvc.yaml 
+  238  kubectl get pod
+  239  kubectl exec -it pod2 -- bash
+  240  ls
+  241  cd /dev/
+  242  cd ..
+  243  ls
+  244  cd
+  245  cat k8s/pv.yaml 
+  246  docker ps
+  247  docker exec -it minikube bash
+  248  minikube dashboard
+  249  history 
+akash@akash:~$ 
 
+```
