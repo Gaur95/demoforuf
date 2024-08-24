@@ -1,2 +1,6 @@
-# demoforuf  this is only For d1
-this is use only for learn git and github
+# terraform
+### cmds
++ terraform init # use for one time
++ terraform plan
++ terraform apply
++ terraform destroy
