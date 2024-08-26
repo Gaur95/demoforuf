@@ -3,6 +3,7 @@ provider "aws" {
   secret_key = "***************************"
   region = "us-east-1"
 }
+
 resource "aws_instance" "akres" {
     ami = "ami-0e86e20dae9224db8"
     instance_type = "t2.micro"
@@ -16,15 +17,22 @@ resource "aws_instance" "akres" {
       host = self.public_ip
       private_key = file("/home/gur/Downloads/nvkey.pem")
       }
-
-    provisioner "file" {
-      source = "abc.txt"
-      destination = "/home/ubuntu/abc.txt"
-    }
     provisioner "remote-exec" {
-        inline = [ "mkdir hey12" ]
+        inline = [ "sudo apt install apache2 -y" ]
       
     }
+    provisioner "file" {
+      source = "/home/gur/Desktop/terraform/Kider Free Website Template - Free-CSS.com"
+      destination = "/home/ubuntu/"
+    }
+    provisioner "remote-exec" {
+        inline = [ "sudo cp -r 'Kider Free Website Template - Free-CSS.com'/preschool-website-template/. /var/www/html/." ]
+      
+    }
+  provisioner "local-exec" {
+    command = "echo 'hello' >cool.txt"
+    
+  }
 }
 
 output "my_public_ip" {
